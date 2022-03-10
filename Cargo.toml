@@ -1,0 +1,23 @@
+[package]
+name = "zipcloud"
+version = "0.1.0"
+authors = ["Hiroki Tanaka <support@kumano-te.com>"]
+license = "MIT"
+edition = "2018"
+description = "Simple library to fetch address information by zip code"
+repository = "https://github.com/kumanote/zipcloud-rs"
+readme = "README.md"
+keywords = ["zip code", "jp", "address"]
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = { version = "1.0", features = ["backtrace"] }
+thiserror = "1.0"
+http = "0.2"
+hyper = { version = "0.14", features = ["client", "http2"] }
+hyper-rustls = "0.23.0"
+
+[dev-dependencies.tokio]
+version = "1"
+features = ["full"]
